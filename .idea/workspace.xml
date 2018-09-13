@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebf43fd9-72c8-4be5-a09b-7be3e1b1b8b8" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/change/choose/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/change/choose/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/change/env/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/change/env/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install.py" beforeDir="false" afterPath="$PROJECT_DIR$/install.py" afterDir="false" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="install.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="install.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/install.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            <state relative-caret-position="399">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#19#28#0" expanded="true" />
               </folding>
@@ -41,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/change/env/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
@@ -132,9 +129,9 @@
         <option value="$PROJECT_DIR$/get_back_shell/__init__.py" />
         <option value="$PROJECT_DIR$/data_post/__init__.py" />
         <option value="$PROJECT_DIR$/buildup/__init__.py" />
-        <option value="$PROJECT_DIR$/install.py" />
         <option value="$PROJECT_DIR$/change/env/__init__.py" />
         <option value="$PROJECT_DIR$/change/choose/__init__.py" />
+        <option value="$PROJECT_DIR$/install.py" />
       </list>
     </option>
   </component>
@@ -143,7 +140,7 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1939" />
@@ -719,16 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding>
-            <element signature="e#19#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/change/choose/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -740,6 +727,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#19#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
