@@ -1,6 +1,6 @@
-def conf(file,keyword,str=123456,pattem=0):
+def conf(file,keyword,str,pattem=0):
     if pattem == 0:
-        if str == ' ':
+        if str == '\r':
             pass
         else:
             with open(file,'r') as f_old:
@@ -11,7 +11,7 @@ def conf(file,keyword,str=123456,pattem=0):
                         line = line.replace(keyword,str)
                     f_new.write(line)
     else:
-       if str == ' ':
+       if str == '\r':
            pass
        else:
            with open(file,'r') as f_old:
