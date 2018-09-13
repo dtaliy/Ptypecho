@@ -9,8 +9,7 @@ from buildup import *
 sex = choose()
 #安装docker与compose
 env()
-#更改工作目录
-os.chdir("./docker-typecho")
+
 #更改域名
 if sex == 1:
     buildup()

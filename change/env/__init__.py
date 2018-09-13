@@ -15,6 +15,7 @@ def env():
 
     command_file = """
         sudo git clone https://github.com/dtaliy/docker-typecho.git
+        cd docker-typecho
         sudo git clone https://github.com/typecho/typecho.git
     """
     os.system(command_file)
