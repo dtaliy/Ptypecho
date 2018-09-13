@@ -13,13 +13,13 @@ def buildup():
     myip = T[1]
     #获取域名
     doman = input("please input your doman (Space carriage return skip):")
-    conf(doman,'typecho.conf','domain')
+    conf('typecho.conf','domain',doman)
     #获取数据库root用户密码
     mysql_root_password = input("please input your mysql root_password:(default:123456,easy but safety)")
-    conf(mysql_root_password,'mysql.env','MYSQL_ROOT_PASSWORD',1)
+    conf('mysql.env','MYSQL_ROOT_PASSWORD',mysql_root_password,1)
     #获取数据库typecho用户密码
     mysql_typecho_password = input("please input your mysql typecho_password:(default:123456,easy but safety,too)")
-    conf(mysql_typecho_password,'mysql.env','MYSQL_PASSWORD',1)
+    conf('mysql.env','MYSQL_PASSWORD',mysql_typecho_password,1)
     #获取管理员用户名
     admin_name = input("please input your admin name:(default:admin)")
     if admin_name == ' ':

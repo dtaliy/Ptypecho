@@ -1,4 +1,4 @@
-def conf(str,file,keyword,pattem=0):
+def conf(file,keyword,str=123456,pattem=0):
     if pattem == 0:
         if str == ' ':
             pass
