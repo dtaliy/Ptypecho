@@ -22,14 +22,14 @@ def buildup():
     conf('mysql.env','MYSQL_PASSWORD',mysql_typecho_password,1)
     #获取管理员用户名
     admin_name = input("please input your admin name:(default:admin)")
-    if admin_name == ' ':
+    if admin_name == '':
         admin_name = "admin"
     #获取管理员用户密码
     admin_password = input("please input your admin password:（default:123456）")
-    if admin_password == ' ':
+    if admin_password == '':
         admin_password = '123456'
     admin_mail = input("finally，please input your mail:(default:982995037@qq.com)")
-    if admin_mail == ' ':
+    if admin_mail == '':
         admin_mail = '982995037@qq.com'
     #dbhost,userurl,userpassword,dbpassword,username ,usermail
     build()
