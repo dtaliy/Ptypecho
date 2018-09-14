@@ -29,7 +29,8 @@ header = {
 class imformation():
     def __init__(self,dbhost,userurl,userpassword,dbpassword,username ,usermail):
         self._dbhost = dbhost
-        self._dbpassword = dbpassword
+        if dbpassword == '':
+            self._dbpassword = '123456'
         self._userurl = userurl
         self._username = username
         self._userpassword = userpassword
@@ -41,11 +42,6 @@ class imformation():
         self._dict = dict
     def __get_hearder(self):
         self._header = header
-    def show(self):
-        print("your dbhost:" + self._dbhost +
-              "your dbpassword" + self._dbpassword +
-             "your datadict" + self._dict)
-        time.sleep(10)
     def update(self):
         self._dict["dbHost"] = self._dbhost
         self._dict['dbPassword'] = self._dbpassword
