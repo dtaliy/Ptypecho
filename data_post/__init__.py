@@ -1,63 +1,22 @@
-import requests
+from selenium import webdriver
 import time
-data = {'created' :'1',
-'dbAdapter':'Pdo_Mysql',
-'dbHost':'',
-'dbPort':'3306',
-'dbUser':'root',
-'dbPassword':'',
-'dbDatabase':'typecho',
-'dbCharset':'utf8',
-'dbCharset':'utf8',
-'dbEngine':'MyISAM',
-'dbPrefix':'typecho_',
-'userUrl':'',
-'userName':'',
-'userPassword':'',
-'userMail':'',
-'action':'config'}
 
-header = {
-'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
-'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-'Accept-Encoding': 'gzip, deflate',
-'Referer':'',
-'Content-Type': 'application/x-www-form-urlencoded',
-'Content-Length':'281',
-'Connection': 'keep-alive',
-'Upgrade-Insecure-Requests': '1'}
+
 class imformation():
-    def __init__(self,dbhost,userurl,userpassword,dbpassword,username ,usermail):
-        self._dbhost = dbhost
-        if dbpassword == '':
-            self._dbpassword = '123456'
-        self._userurl = userurl
-        self._username = username
-        self._userpassword = userpassword
-        self._usermail = usermail
-        self._dict = {}
-        self._header = {}
-
-    def __get_dict(self):
-        self._dict = data
-    def __get_hearder(self):
-        self._header = header
-    def update(self):
-        self._dict["dbHost"] = self._dbhost
-        self._dict['dbPassword'] = self._dbpassword
-        self._dict['usrUrl'] = "http://" + self._userurl
-        self._dict['userMail'] = self._usermail
-        self._dict['userName'] = self._username
-        self._dict['userPassword'] = self._userpassword
-    def sent(self):
-        self.__get_dict()
-        self.__get_hearder()
+    def __init__(self):
+        self.driver = webdriver.Chrome()
+        self.elem = None
+    def send(self,id,v):
+        self.elem = self.driver.find_element_by_id(id).send_keys(v)
+    def finsh(self,dbHost,userurl,dbPassword,userName,userPassword,userMail):
         url = 'http://'+self._userurl+ '/install.php?config'
-        self._header['Referer'] = url
-        self.update()
-        r = requests.post(url,data=self._dict,headers=self._header)
-        print(r.status_code)
+        self.driver.get(url)
+        self.send('dbHost',dbHost)
+        self.send('dbPassword',dbPassword)
+        self.send('userName',userName)
+        self.send('userPassword',userPassword)
+        self.send('userMail',userMail)
+        self.driver.find_element_by_class_name("btn primary").click()
     def write_conf(self):
         configphp = """<?php
 /**
@@ -103,7 +62,6 @@ $db->addServer(array (
   'engine' => 'MyISAM',
 ), Typecho_Db::READ | Typecho_Db::WRITE);
 Typecho_Db::set($db);
-
 """
         configphp = configphp.replace('192.168.64.2',self._dbhost)
         configphp = configphp.replace('123456',self._dbpassword)
