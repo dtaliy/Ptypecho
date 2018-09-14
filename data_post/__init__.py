@@ -54,8 +54,13 @@ class imformation():
         self.__get_hearder()
         url = 'http://'+self._userurl+ '/install.php?config'
         self._header['Referer'] = url
-        print("data:"+self._dict)
-        print("hearders:" + self._header)
+        print("data:")
+        print(self._dict)
+        print("\n")
+        print("heard:")
+        print(self._header)
+        print("\n")
+        
         time.sleep(20)
         r = requests.post(url,data=self._dict,headers=self._header)
         if r.status_code == 200 :
