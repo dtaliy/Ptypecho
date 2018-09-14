@@ -53,7 +53,10 @@ class imformation():
         self.__get_dict()
         self.__get_hearder()
         url = 'http://'+self._userurl+ '/install.php?config'
-        self._header['Referer'] = 'http://' + url + '/install.php?config'
+        self._header['Referer'] = url
+        print("data:"+self._dict)
+        print("hearders:" + self._header)
+        time.sleep(20)
         r = requests.post(url,data=self._dict,headers=self._header)
         if r.status_code == 200 :
             print("安装完毕")

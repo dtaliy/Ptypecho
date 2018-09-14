@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebf43fd9-72c8-4be5-a09b-7be3e1b1b8b8" name="默认的" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buildup/__init__.py" afterPath="$PROJECT_DIR$/buildup/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_post/__init__.py" afterPath="$PROJECT_DIR$/data_post/__init__.py" />
     </list>
     <ignored path="untitled.iws" />
@@ -83,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buildup/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.52302027">
+              <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -95,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_post/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38674033">
-              <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -137,8 +138,8 @@
         <option value="$PROJECT_DIR$/get_back_shell/__init__.py" />
         <option value="$PROJECT_DIR$/install.py" />
         <option value="$PROJECT_DIR$/change/env/__init__.py" />
-        <option value="$PROJECT_DIR$/buildup/__init__.py" />
         <option value="$PROJECT_DIR$/data_post/__init__.py" />
+        <option value="$PROJECT_DIR$/buildup/__init__.py" />
       </list>
     </option>
   </component>
@@ -148,8 +149,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="346" />
-    <option name="y" value="63" />
+    <option name="x" value="123" />
     <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
@@ -499,7 +499,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="346" y="63" width="1938" height="1048" extended-state="0" />
+    <frame x="123" y="0" width="1938" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -968,22 +968,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildup/__init__.py">
+    <entry file="file://$PROJECT_DIR$/data_post/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_post/__init__.py">
+    <entry file="file://$PROJECT_DIR$/buildup/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38674033">
-          <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.52302027">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
