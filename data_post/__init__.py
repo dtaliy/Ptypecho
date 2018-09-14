@@ -63,12 +63,12 @@ class imformation():
 
         configphp = """<?php
 /**
-*Typecho Blog Platform
-*
-* @copyright  Copyright (c) 2008 Typecho team (http://www.typecho.org)
-* @license    GNU General Public License 2.0
-* @version    $Id$
-*/
+ * Typecho Blog Platform
+ *
+ * @copyright  Copyright (c) 2008 Typecho team (http://www.typecho.org)
+ * @license    GNU General Public License 2.0
+ * @version    $Id$
+ */
 
 /** 定义根目录 */
 define('__TYPECHO_ROOT_DIR__', dirname(__FILE__));
@@ -96,15 +96,16 @@ Typecho_Common::init();
 /** 定义数据库参数 */
 $db = new Typecho_Db('Pdo_Mysql', 'typecho_');
 $db->addServer(array (
-    'host' => '192.168.64.2',
-    'user' => 'root',
-    'password' => '123456',
-    'charset' => 'utf8',
-    'port' => '3306',
-    'database' => 'typecho',
-    'engine' => 'MyISAM',
+  'host' => '192.168.64.2',
+  'user' => 'root',
+  'password' => '123456',
+  'charset' => 'utf8',
+  'port' => '3306',
+  'database' => 'typecho',
+  'engine' => 'MyISAM',
 ), Typecho_Db::READ | Typecho_Db::WRITE);
 Typecho_Db::set($db);
+
 """
         configphp = configphp.replace('192.168.64.2',self._dbhost)
         configphp = configphp.replace('123456',self._dbpassword)
