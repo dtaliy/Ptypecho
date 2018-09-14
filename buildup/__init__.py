@@ -36,7 +36,6 @@ def buildup():
     dbhost= output[1]
     imf = data_post.imformation(dbhost,myip,admin_password,mysql_root_password,admin_name,admin_mail)
     imf.update()
-    imf.sent()
     imf.write_conf()
     imf.sent()
     os.system("clean")

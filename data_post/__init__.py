@@ -39,7 +39,7 @@ class imformation():
         self._header = {}
 
     def __get_dict(self):
-        self._dict = dict
+        self._dict = data
     def __get_hearder(self):
         self._header = header
     def update(self):
@@ -60,7 +60,7 @@ class imformation():
         print("heard:")
         print(self._header)
         print("\n")
-        
+
         time.sleep(20)
         r = requests.post(url,data=self._dict,headers=self._header)
         if r.status_code == 200 :
