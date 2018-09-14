@@ -1,6 +1,5 @@
 import requests
-
-
+import time
 data = {'dbAdapter':'Pdo_Mysql',
 'dbHost':'',
 'dbPort':'3306',
@@ -37,10 +36,16 @@ class imformation():
         self._usermail = usermail
         self._dict = {}
         self._header = {}
+
     def __get_dict(self):
         self._dict = dict
     def __get_hearder(self):
         self._header = header
+    def show(self):
+        print("your dbhost:" + self._dbhost +
+              "your dbpassword" + self._dbpassword +
+             "your datadict" + self._dict)
+        time.sleep(10)
     def update(self):
         self._dict["dbHost"] = self._dbhost
         self._dict['dbPassword'] = self._dbpassword
@@ -49,6 +54,8 @@ class imformation():
         self._dict['userName'] = self._username
         self._dict['userPassword'] = self._userpassword
     def sent(self):
+        self.__get_dict()
+        self.__get_hearder()
         url = 'http://'+self._userurl+ '/install.php?config'
         self._header['Referer'] = 'http://' + url + '/install.php?config'
         r = requests.post(url,data=self._dict,headers=self._header)
