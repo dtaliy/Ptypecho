@@ -1,6 +1,7 @@
 import requests
 import time
-data = {'dbAdapter':'Pdo_Mysql',
+data = {'create' :'1',
+'dbAdapter':'Pdo_Mysql',
 'dbHost':'',
 'dbPort':'3306',
 'dbUser':'root',
@@ -54,6 +55,7 @@ class imformation():
         self.__get_hearder()
         url = 'http://'+self._userurl+ '/install.php?config'
         self._header['Referer'] = url
+        self.update()
         print("data:")
         print(self._dict)
         print("\n")

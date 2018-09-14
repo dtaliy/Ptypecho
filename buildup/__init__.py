@@ -35,10 +35,9 @@ def buildup():
     output = subprocess.getstatusoutput("sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(sudo docker ps | grep 'mysql' | awk '{print $1}')")
     dbhost= output[1]
     imf = data_post.imformation(dbhost,myip,admin_password,mysql_root_password,admin_name,admin_mail)
-    imf.update()
     imf.write_conf()
     imf.sent()
-    os.system("clean")
+    os.system("clear")
     print("your imformation:\n"
           "your ip:" + myip + "\n"
           "your admin name:"+ admin_name + "\n"
