@@ -1,6 +1,6 @@
 import requests
 import time
-data = {'create' :'1',
+data = {'created' :'1',
 'dbAdapter':'Pdo_Mysql',
 'dbHost':'',
 'dbPort':'3306',
@@ -56,21 +56,9 @@ class imformation():
         url = 'http://'+self._userurl+ '/install.php?config'
         self._header['Referer'] = url
         self.update()
-        print("data:")
-        print(self._dict)
-        print("\n")
-        print("heard:")
-        print(self._header)
-        print("\n")
-
-        time.sleep(20)
         r = requests.post(url,data=self._dict,headers=self._header)
-        if r.status_code == 200 :
-            print("安装完毕")
-        else:
-            print("安装出现了不可描述的错误，请联系作者")
+        print(r.status_code)
     def write_conf(self):
-
         configphp = """<?php
 /**
  * Typecho Blog Platform
