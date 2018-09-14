@@ -3,7 +3,7 @@ import subprocess
 def env():
     docker = subprocess.getstatusoutput("sudo docker ps | awk '{print $1}'")
     if docker[1] != "CONTAINER":
-        os.system("sudo curl -sSL https://get.daocloud.io/docker | sh &&")
+        os.system("sudo curl -sSL https://get.daocloud.io/docker | sh")
     docker_compose = subprocess.getstatusoutput("ls /usr/local/bin | grep 'docker-compose'")
 
     command_env = """
