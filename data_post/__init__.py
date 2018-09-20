@@ -1,22 +1,54 @@
-from selenium import webdriver
+import requests
 import time
 
 
+header = {
+'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0'}
 class imformation():
-    def __init__(self):
-        self.driver = webdriver.Chrome()
-        self.elem = None
-    def send(self,id,v):
-        self.elem = self.driver.find_element_by_id(id).send_keys(v)
-    def finsh(self,dbHost,userurl,dbPassword,userName,userPassword,userMail):
+    def __init__(self,dbhost,userurl,userpassword,dbpassword,username ,usermail):
+        self._dbhost = dbhost
+        if dbpassword == '':
+            self._dbpassword = '123456'
+        else:
+            self._dbpassword = dbpassword
+        self._userurl = userurl
+        self._username = username
+        self._userpassword = userpassword
+        self._usermail = usermail
+        self._dict = {
+'dbAdapter':'Pdo_Mysql',
+'dbHost':'',
+'dbPort':'3306',
+'dbUser':'root',
+'dbPassword':'',
+'dbDatabase':'typecho',
+'dbCharset':'utf8',
+'dbCharset':'utf8',
+'dbEngine':'MyISAM',
+'dbPrefix':'typecho_',
+'userUrl':'',
+'userName':'',
+'userPassword':'',
+'userMail':'',
+'action':'config'}
+
+
+    def update(self):
+        self._dict["dbHost"] = self._dbhost
+        self._dict['dbPassword'] = self._dbpassword
+        self._dict['userUrl'] = "http://" + self._userurl
+        self._dict['userMail'] = self._usermail
+        self._dict['userName'] = self._username
+        self._dict['userPassword'] = self._userpassword
+    def sent(self):
+
         url = 'http://'+self._userurl+ '/install.php?config'
-        self.driver.get(url)
-        self.send('dbHost',dbHost)
-        self.send('dbPassword',dbPassword)
-        self.send('userName',userName)
-        self.send('userPassword',userPassword)
-        self.send('userMail',userMail)
-        self.driver.find_element_by_class_name("btn primary").click()
+        self.update()
+        print(url)
+        print(self._dict)
+        r = requests.post(url,data=self._dict,headers=header)
+        print(r.status_code)
+        print(r.text)
     def write_conf(self):
         configphp = """<?php
 /**
@@ -62,6 +94,7 @@ $db->addServer(array (
   'engine' => 'MyISAM',
 ), Typecho_Db::READ | Typecho_Db::WRITE);
 Typecho_Db::set($db);
+
 """
         configphp = configphp.replace('192.168.64.2',self._dbhost)
         configphp = configphp.replace('123456',self._dbpassword)
