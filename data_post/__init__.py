@@ -40,7 +40,7 @@ class imformation():
         self._dict['userMail'] = self._usermail
         self._dict['userName'] = self._username
         self._dict['userPassword'] = self._userpassword
-    def sent(self):
+    """def sent(self):
 
         url = 'http://'+self._userurl+ '/install.php?config'
         self.update()
@@ -48,7 +48,7 @@ class imformation():
         print(self._dict)
         r = requests.post(url,data=self._dict,headers=header)
         print(r.status_code)
-        print(r.text)
+        print(r.text)"""
     def write_conf(self):
         configphp = """<?php
 /**
@@ -94,7 +94,6 @@ $db->addServer(array (
   'engine' => 'MyISAM',
 ), Typecho_Db::READ | Typecho_Db::WRITE);
 Typecho_Db::set($db);
-
 """
         configphp = configphp.replace('192.168.64.2',self._dbhost)
         configphp = configphp.replace('123456',self._dbpassword)

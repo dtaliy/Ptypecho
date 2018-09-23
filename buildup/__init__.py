@@ -32,14 +32,13 @@ def buildup():
         admin_mail = '982995037@qq.com'
     #dbhost,userurl,userpassword,dbpassword,username ,usermail
     build()
-    os.system("sudo chmod -R 777 mysql")
     output = subprocess.getstatusoutput("sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(sudo docker ps | grep 'mysql' | awk '{print $1}')")
     dbhost= output[1]
     imf = data_post.imformation(dbhost,myip,admin_password,mysql_root_password,admin_name,admin_mail)
     imf.write_conf()
-    imf.sent()
     os.system("clear")
     print("your imformation:\n"
           "your ip:" + myip + "\n"
           "your admin name:"+ admin_name + "\n"
-          "your admin password:" + admin_password + "\n")
+          "your admin password:" + admin_password + "\n"
+          "your mysql dbhost" + dbhost + '\n')
